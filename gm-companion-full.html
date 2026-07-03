@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #121218;
+  --color-text: #e4e4ed;
+  --color-navbar-bg: #1a1a24;
+  --color-bg-chat-view: #121218;
+  --color-bg-secondary: #1a1a24;
+  --color-bg-tertiary: #1e1e2a;
+  --color-bg-hover: #2a2a38;
+  --color-surface: #1e1e2a;
+  --color-surface-hover: #2a2a38;
+  --color-surface-active: #353546;
+  --color-border: rgba(255, 255, 255, .12);
+  --color-border-light: rgba(255, 255, 255, .06);
+  --color-border-strong: #3a3a4e;
+  --color-primary: #8575ff;
+  --color-primary-dark: #4200db;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-primary-hover-border: #4200db;
+  --color-nav-icon-active: #8575ff;
+  --color-nav-hover-border: #8575ff;
+  --color-primary-alpha-3: color-mix(in srgb, #8575ff 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #8575ff 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #8575ff 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #8575ff 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #8575ff 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #8575ff 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #8575ff 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #8575ff 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #8575ff 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #8575ff 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #8575ff 25%, transparent);
+  --color-primary-border: color-mix(in srgb, #8575ff 50%, transparent);
+  --color-focus-ring: color-mix(in srgb, #8575ff 60%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-accent: #8575ff;
+  --color-accent-foreground: #8575ff;
+  --color-accent-dark: #4200db;
+  --color-accent-light: color-mix(in srgb, #8575ff 15%, transparent);
+  --color-accent-inverse: #ffffff;
+  --color-link: #8575ff;
+  --color-primary-gradient-end: color-mix(in srgb, #8575ff 35%, transparent);
+  --color-primary-bg-solid: #1a1530;
+  --color-user-bubble: #333843;
+  --color-user-bubble-text: #e4e4ed;
+  --color-text-secondary: #a0a0b4;
+  --color-text-tertiary: #8a8a9a;
+  --color-text-muted: #6e6e82;
+  --color-text-on-primary: #ffffff;
+  --color-success: #4ade80;
+  --color-success-dark: #00802f;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #1c2c22;
+  --color-success-border: #0e3d1c;
+  --color-success-foreground: #4ade80;
+  --color-success-dark-foreground: #00802f;
+  --color-success-text: #4ade80;
+  --color-error: #ff6b6b;
+  --color-error-dark: #db0000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #3b1a24;
+  --color-error-bg: #3b1a24;
+  --color-error-border: #5e1a24;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #ff6b6b;
+  --color-error-dark-foreground: #db0000;
+  --color-error-inverse: #ffffff;
+  --color-error-text: #ff6b6b;
+  --color-warning: #fbbf24;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #3d3520;
+  --color-warning-border: #5e4a1a;
+  --color-warning-foreground: #fbbf24;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #60a5fa;
+  --color-info-dark: #006ce0;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #1a2a42;
+  --color-info-border: #0f3d6e;
+  --color-info-foreground: #60a5fa;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #ffffff;
+  --color-overlay: rgba(0, 0, 0, .7);
+  --color-shadow: rgba(0, 0, 0, .3);
+  --color-hover: rgba(255, 255, 255, .05);
+  --color-tooltip-bg: rgba(30, 30, 42, .95);
+  --color-tooltip-text: #e4e4ed;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #ff6b6b;
+  --color-voice-red-dark: #db0000;
+  --color-voice-amber: #fbbf24;
+  --color-voice-purple-glow: rgba(133, 117, 255, .4);
+  --color-voice-red-glow: rgba(219, 0, 0, .4);
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, .3);
+  --color-success-bg-solid: #1a3d28;
+  --color-error-bg-solid: #4a2028;
+  --color-error-border-solid: #5e1a24;
+  --color-warning-bg-solid: #4a3a1e;
+  --color-warning-text: #fbbf24;
+  --color-info-bg-solid: #1a3050;
+  --color-info-bg-solid-alt: #222240;
+  --color-info-text: #60a5fa;
+  --color-info-text-alt: #818cf8;
+  --color-emerald: #34d399;
+  --color-teal: #5eead4;
+  --color-code-bg: #1e1e2a;
+  --color-code-header-bg: #252535;
+  --color-code-text: #e4e4ed;
+  --color-code-border: #2e2e3e;
+  --color-code-muted: #6e6e82;
+  --color-inline-code-bg: #1e1e2a;
+  --color-inline-code-text: #e4e4ed;
+  --color-inline-code-border: #2e2e3e;
+  --color-scrollbar-thumb: #3a3a4e;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #e4e4ed;
+  --color-graph-node-text-dim: #6e6e82;
+  --color-graph-edge-default: #6e6e82;
+  --color-graph-edge-cross: #F39C12;
+  --color-graph-edge-text: #a0a0b4;
+  --color-graph-edge-stroke: #1a1a24;
+  --color-graph-highlight-bg: #FF6B6B;
+  --color-graph-highlight-border: #E74C3C;
+  --color-graph-search-bg: #FFD700;
+  --color-graph-search-border: #FFA500;
+  --color-graph-focus-border: #FF4444;
+  --color-graph-external-border: #6e6e82;
+  --color-graph-cat-file: #5DADE2;
+  --color-graph-cat-folder: #AAB7B8;
+  --color-graph-cat-file-aggregate: #5499C7;
+  --color-graph-cat-class: #BB8FCE;
+  --color-graph-cat-function: #58D68D;
+  --color-graph-cat-method: #48C9B0;
+  --color-graph-cat-variable: #F5B041;
+  --color-graph-cat-import: #EB984E;
+  --color-graph-cat-module: #7E8CE0;
+  --color-graph-cat-concept: #EC7063;
+  --color-graph-cat-person: #FF8A8A;
+  --color-graph-cat-org: #76D7C4;
+  --color-graph-cat-organization: #76D7C4;
+  --color-graph-cat-product: #B8B0FE;
+  --color-graph-cat-metric: #FEA0C0;
+  --color-graph-cat-location: #7E9BB5;
+  --color-graph-cat-date: #F092C0;
+  --color-graph-cat-code: #5DADE2;
+  --color-graph-cat-doc: #AAB7B8;
+  --color-graph-cat-url: #45D6B5;
+  --color-graph-cat-email: #8E7CF7;
+  --color-graph-cat-unknown: #D5DBDB;
+  --color-graph-rel-contains: #D5DBDB;
+  --color-graph-rel-extends: #BB8FCE;
+  --color-graph-rel-implements: #5DADE2;
+  --color-graph-rel-imports: #EB984E;
+  --color-graph-rel-uses: #58D68D;
+  --color-graph-rel-calls: #52BE80;
+  --color-graph-rel-references: #F5B041;
+  --color-graph-rel-related-to: #AAB7B8;
+  --color-graph-rel-works-on: #EC7063;
+  --color-graph-rel-owns: #48C9B0;
+  --color-graph-rel-depends-on: #EB984E;
+  --color-graph-rel-parent-of: #D5DBDB;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #6e6e82;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #1e1e2a;
+  --qs-tertiary-background: #1e1e2a;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: rgba(180, 0, 170, 1);
+  --highlight-selected-bg-color: rgba(0, 100, 0, 1);
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: dark;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Star Wars RPG - GM Companion</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+  --bg: #0a0a0f;
+  --bg2: #12121a;
+  --card: #1a1a25;
+  --card2: #222230;
+  --border: #2a2a3a;
+  --text: #e8e8f0;
+  --text-dim: #8888a0;
+  --accent: #ff6b35;
+  --accent2: #ff8c5a;
+  --gold: #ffd700;
+  --green: #4ade80;
+  --red: #ff4444;
+  --blue: #60a5fa;
+  --purple: #a78bfa;
+  --danger: #ff4444;
+  --success: #4ade80;
+  --warning: #fbbf24;
+  --info: #60a5fa;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+/* Header */
+.header {
+  background: linear-gradient(135deg, #1a1a25 0%, #0a0a0f 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header h1 {
+  font-size: 1.4em;
+  background: linear-gradient(135deg, var(--accent), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+.header .subtitle {
+  font-size: 0.8em;
+  color: var(--text-dim);
+}
+/* Tabs */
+.tab-nav {
+  display: flex;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  position: sticky;
+  top: 60px;
+  z-index: 99;
+}
+.tab-btn {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-size: 0.85em;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+.tab-btn:hover { color: var(--text); background: rgba(255,107,53,.05); }
+.tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+.tab-panel { display: none; padding: 20px; max-width: 1200px; margin: 0 auto; }
+.tab-panel.active { display: block; }
+/* Cards */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.card-title {
+  font-size: 0.9em;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/* Forms */
+input, select, textarea {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85em;
+  width: 100%;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+textarea { resize: vertical; min-height: 80px; font-family: inherit; }
+label { font-size: 0.75em; color: var(--text-dim); display: block; margin-bottom: 4px; }
+.form-row { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.form-group { flex: 1; min-width: 80px; }
+/* Buttons */
+.btn {
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card2);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn:hover { background: var(--border); }
+.btn-accent { background: var(--accent); color: #fff; border-color: var(--accent); }
+.btn-accent:hover { background: var(--accent2); }
+.btn-danger { background: var(--red); color: #fff; border-color: var(--red); }
+.btn-danger:hover { opacity: 0.8; }
+.btn-success { background: var(--green); color: #000; border-color: var(--green); }
+.btn-sm { padding: 5px 10px; font-size: 0.75em; }
+/* Tables */
+table { width: 100%; border-collapse: collapse; font-size: 0.8em; }
+th, td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border); }
+th { color: var(--accent); font-weight: 600; font-size: 0.75em; text-transform: uppercase; }
+tr:hover { background: rgba(255,107,53,.03); }
+/* Combat tracker */
+.combatant-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+.combatant-row:hover { background: rgba(255,107,53,.05); }
+.combatant-row.active-turn { background: rgba(255,107,53,.1); border-left: 3px solid var(--accent); }
+.combatant-row.dead { opacity: 0.4; }
+.hp-bar {
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+.hp-bar-fill { height: 100%; background: var(--green); transition: width 0.3s; border-radius: 3px; }
+.hp-bar-fill.low { background: var(--warning); }
+.hp-bar-fill.critical { background: var(--red); }
+/* Condition tags */
+.condition-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.7em;
+  background: rgba(255,107,53,.15);
+  color: var(--accent);
+  margin: 2px;
+}
+/* NPC Cards */
+.npc-card {
+  background: var(--card2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+.npc-card h4 { color: var(--gold); margin-bottom: 6px; font-size: 0.95em; }
+.npc-stat { display: inline-block; margin-right: 12px; font-size: 0.8em; }
+.npc-stat span { color: var(--accent); font-weight: 600; }
+/* Generator results */
+.gen-result {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+/* Notes */
+.note-item {
+  background: var(--card2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+.note-item .note-time { font-size: 0.7em; color: var(--text-dim); }
+.note-item .note-text { margin-top: 6px; font-size: 0.85em; white-space: pre-wrap; }
+/* Rules Reference */
+.rule-section { margin-bottom: 16px; }
+.rule-section h4 { color: var(--gold); margin-bottom: 8px; font-size: 0.9em; }
+.dc-table td:first-child { color: var(--accent); font-weight: 600; }
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+/* Animations */
+@keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+.fade-in { animation: fadeIn 0.3s ease; }
+/* Responsive grid */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+@media (max-width: 768px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .tab-btn { padding: 10px 14px; }
+}
+/* Tooltip/Modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,.7);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+.modal-overlay.active { display: flex; }
+.modal-content {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1><i class="fas fa-jedi"></i> GM COMPANION</h1>
+    <div class="subtitle">Star Wars RPG d20 Revised</div>
+  </div>
+</div>
+
+<div class="tab-nav" id="tabNav">
+  <button class="tab-btn active" data-tab="encounters"><i class="fas fa-swords"></i> Encounters</button>
+  <button class="tab-btn" data-tab="npcs"><i class="fas fa-users"></i> NPCs</button>
+  <button class="tab-btn" data-tab="generators"><i class="fas fa-dice-d20"></i> Generators</button>
+  <button class="tab-btn" data-tab="rules"><i class="fas fa-book"></i> Rules</button>
+  <button class="tab-btn" data-tab="notes"><i class="fas fa-scroll"></i> Notes</button>
+  <button class="tab-btn" data-tab="save"><i class="fas fa-save"></i> Save/Load</button>
+</div>
+
+<!-- ENCOUNTERS TAB -->
+<div class="tab-panel active" id="tab-encounters">
+  <div class="card">
+    <div class="card-title"><i class="fas fa-plus"></i> ADD COMBATANT</div>
+    <div class="form-row">
+      <div class="form-group" style="flex:3"><label>Name</label><input type="text" id="enc-name" placeholder="Stormtrooper 1"></div>
+      <div class="form-group"><label>Init</label><input type="number" id="enc-init" value="0"></div>
+      <div class="form-group"><label>HP</label><input type="number" id="enc-hp" value="15"></div>
+      <div class="form-group"><label>Max HP</label><input type="number" id="enc-maxhp" value="15"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Defense</label><input type="number" id="enc-def" value="15"></div>
+      <div class="form-group"><label>Attack</label><input type="text" id="enc-atk" value="+3"></div>
+      <div class="form-group"><label>Damage</label><input type="text" id="enc-dmg" value="3d6"></div>
+      <div class="form-group"><label>Type</label>
+        <select id="enc-type">
+          <option value="enemy">Enemy</option>
+          <option value="ally">Ally</option>
+          <option value="neutral">Neutral</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group" style="flex:3"><label>Notes</label><input type="text" id="enc-notes" placeholder="Special abilities, tactics..."></div>
+      <div class="form-group" style="flex:0"><label>&nbsp;</label><button class="btn btn-accent" data-action="add-combatant"><i class="fas fa-plus"></i> Add</button></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="justify-content:space-between">
+      <span><i class="fas fa-clock"></i> COMBAT TRACKER — Round <span id="round-num">1</span></span>
+      <div style="display:flex;gap:6px">
+        <button class="btn btn-sm" data-action="prev-turn"><i class="fas fa-backward"></i></button>
+        <button class="btn btn-sm btn-accent" data-action="next-turn"><i class="fas fa-forward"></i> Next</button>
+        <button class="btn btn-sm" data-action="sort-init"><i class="fas fa-sort-numeric-down"></i> Sort</button>
+        <button class="btn btn-sm btn-danger" data-action="clear-encounter"><i class="fas fa-trash"></i> Clear</button>
+      </div>
+    </div>
+    <div id="combatants-list"></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><i class="fas fa-bolt"></i> QUICK ACTIONS</div>
+    <div class="form-row">
+      <div class="form-group"><label>Target</label><select id="qa-target"></select></div>
+      <div class="form-group"><label>Amount</label><input type="number" id="qa-amount" value="5"></div>
+      <div class="form-group" style="flex:0"><label>&nbsp;</label><button class="btn btn-danger btn-sm" data-action="qa-damage"><i class="fas fa-heart-crack"></i> Damage</button></div>
+      <div class="form-group" style="flex:0"><label>&nbsp;</label><button class="btn btn-success btn-sm" data-action="qa-heal"><i class="fas fa-heart"></i> Heal</button></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Add Condition</label>
+        <select id="qa-condition">
+          <option value="">-- Select --</option>
+          <option value="Stunned">Stunned</option>
+          <option value="Prone">Prone</option>
+          <option value="Flat-Footed">Flat-Footed</option>
+          <option value="Grappled">Grappled</option>
+          <option value="Helpless">Helpless</option>
+          <option value="Blinded">Blinded</option>
+          <option value="Dazed">Dazed</option>
+          <option value="Frightened">Frightened</option>
+          <option value="Nauseated">Nauseated</option>
+          <option value="Staggered">Staggered</option>
+          <option value="Unconscious">Unconscious</option>
+        </select>
+      </div>
+      <div class="form-group" style="flex:0"><label>&nbsp;</label><button class="btn btn-sm" data-action="qa-add-condition"><i class="fas fa-plus"></i></button></div>
+      <div class="form-group" style="flex:0"><label>&nbsp;</label><button class="btn btn-sm" data-action="qa-clear-conditions"><i class="fas fa-broom"></i> Clear All</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- NPCS TAB -->
+<div class="tab-panel" id="tab-npcs">
+  <div class="card">
+    <div class="card-title"><i class="fas fa-user-plus"></i> NPC BUILDER</div>
+    <div class="form-row">
+      <div class="form-group" style="flex:2"><label>Name</label><input type="text" id="npc-name" placeholder="Captain Vorsk"></div>
+      <div class="form-group"><label>Species</label>
+        <select id="npc-species">
+          <option value="Human">Human</option>
+          <option value="Twi'lek">Twi'lek</option>
+          <option value="Rodian">Rodian</option>
+          <option value="Wookiee">Wookiee</option>
+          <option value="Trandoshan">Trandoshan</option>
+          <option value="Duros">Duros</option>
+          <option value="Zabrak">Zabrak</option>
+          <option value="Mon Calamari">Mon Calamari</option>
+          <option value="Bothan">Bothan</option>
+          <option value="Sullustan">Sullustan</option>
+          <option value="Ithorian">Ithorian</option>
+          <option value="Gran">Gran</option>
+          <option value="Droid">Droid</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Role</label>
+        <select id="npc-role">
+          <option value="Thug">Thug</option>
+          <option value="Soldier">Soldier</option>
+          <option value="Officer">Officer</option>
+          <option value="Pilot">Pilot</option>
+          <option value="Scoundrel">Scoundrel</option>
+          <option value="Noble">Noble</option>
+          <option value="Jedi">Jedi</option>
+          <option value="Sith">Sith</option>
+          <option value="Bounty Hunter">Bounty Hunter</option>
+          <option value="Merchant">Merchant</option>
+          <option value="Tech">Tech</option>
+          <option value="Beast">Beast</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Level/CR</label><input type="number" id="npc-level" value="3" min="1" max="20"></div>
+      <div class="form-group"><label>HP</label><input type="number" id="npc-hp" value="18"></div>
+      <div class="form-group"><label>Defense</label><input type="number" id="npc-def" value="14"></div>
+      <div class="form-group"><label>Attack</label><input type="text" id="npc-atk" value="+4"></div>
+      <div class="form-group"><label>Damage</label><input type="text" id="npc-dmg" value="3d6+1"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Fort</label><input type="text" id="npc-fort" value="+3"></div>
+      <div class="form-group"><label>Ref</label><input type="text" id="npc-ref" value="+4"></div>
+      <div class="form-group"><label>Will</label><input type="text" id="npc-will" value="+1"></div>
+      <div class="form-group"><label>Speed</label><input type="text" id="npc-speed" value="10m"></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group" style="flex:3"><label>Special / Notes</label><textarea id="npc-special" rows="2" placeholder="Special abilities, equipment, tactics..."></textarea></div>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:8px">
+      <button class="btn btn-accent" data-action="save-npc"><i class="fas fa-save"></i> Save NPC</button>
+      <button class="btn" data-action="gen-npc"><i class="fas fa-dice"></i> Random Stats</button>
+      <button class="btn" data-action="add-npc-to-combat"><i class="fas fa-swords"></i> Add to Combat</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><i class="fas fa-address-book"></i> SAVED NPCs</div>
+    <div style="margin-bottom:10px"><input type="text" id="npc-search" placeholder="Search NPCs..."></div>
+    <div id="npc-list"></div>
+  </div>
+</div>
+
+<!-- GENERATORS TAB -->
+<div class="tab-panel" id="tab-generators">
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title"><i class="fas fa-user"></i> NAME GENERATOR</div>
+      <div class="form-row">
+        <div class="form-group"><label>Species</label>
+          <select id="gen-name-species">
+            <option value="human">Human</option>
+            <option value="twilek">Twi'lek</option>
+            <option value="rodian">Rodian</option>
+            <option value="wookiee">Wookiee</option>
+            <option value="trandoshan">Trandoshan</option>
+            <option value="duros">Duros</option>
+            <option value="zabrak">Zabrak</option>
+            <option value="bothan">Bothan</option>
+            <option value="hutt">Hutt</option>
+            <option value="droid">Droid</option>
+          </select>
+        </div>
+        <div class="form-group" style="flex:0"><label>&nbsp;</label><button class="btn btn-accent" data-action="gen-name"><i class="fas fa-dice"></i></button></div>
+      </div>
+      <div class="gen-result" id="gen-name-result">Click to generate a name...</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><i class="fas fa-treasure-chest"></i> LOOT GENERATOR</div>
+      <div class="form-row">
+        <div class="form-group"><label>CR Level</label>
+          <select id="gen-loot-cr">
+            <option value="1">CR 1-3 (Low)</option>
+            <option value="2">CR 4-7 (Medium)</option>
+            <option value="3">CR 8-12 (High)</option>
+            <option value="4">CR 13+ (Epic)</option>
+          </select>
+        </div>
+        <div class="form-group" style="flex:0"><label>&nbsp;</label><button class="btn btn-accent" data-action="gen-loot"><i class="fas fa-dice"></i></button></div>
+      </div>
+      <div class="gen-result" id="gen-loot-result">Click to generate loot...</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><i class="fas fa-map-location-dot"></i> ENCOUNTER GENERATOR</div>
+      <div class="form-row">
+        <div class="form-group"><label>Environment</label>
+          <select id="gen-enc-env">
+            <option value="urban">Urban / Cantina</option>
+            <option value="space">Space / Starship</option>
+            <option value="wilderness">Wilderness / Planet</option>
+            <option value="imperial">Imperial Facility</option>
+            <option value="underworld">Criminal Underworld</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Difficulty</label>
+          <select id="gen-enc-diff">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+            <option value="deadly">Deadly</option>
+          </select>
+        </div>
+        <div class="form-group" style="flex:0"><label>&nbsp;</label><button class="btn btn-accent" data-action="gen-encounter"><i class="fas fa-dice"></i></button></div>
+      </div>
+      <div class="gen-result" id="gen-enc-result">Click to generate an encounter...</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><i class="fas fa-planet-ringed"></i> LOCATION GENERATOR</div>
+      <div class="form-row">
+        <div class="form-group"><label>Type</label>
+          <select id="gen-loc-type">
+            <option value="planet">Planet</option>
+            <option value="station">Space Station</option>
+            <option value="cantina">Cantina / Shop</option>
+            <option value="ship">Starship</option>
+          </select>
+        </div>
+        <div class="form-group" style="flex:0"><label>&nbsp;</label><button class="btn btn-accent" data-action="gen-location"><i class="fas fa-dice"></i></button></div>
+      </div>
+      <div class="gen-result" id="gen-loc-result">Click to generate a location...</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><i class="fas fa-dice-d20"></i> QUICK DICE ROLLER</div>
+    <div class="form-row">
+      <button class="btn" data-action="roll" data-dice="1d4">d4</button>
+      <button class="btn" data-action="roll" data-dice="1d6">d6</button>
+      <button class="btn" data-action="roll" data-dice="1d8">d8</button>
+      <button class="btn" data-action="roll" data-dice="1d10">d10</button>
+      <button class="btn" data-action="roll" data-dice="1d12">d12</button>
+      <button class="btn" data-action="roll" data-dice="1d20">d20</button>
+      <button class="btn" data-action="roll" data-dice="1d100">d100</button>
+    </div>
+    <div class="form-row" style="margin-top:8px">
+      <div class="form-group"><input type="text" id="custom-dice" placeholder="e.g. 3d6+2"></div>
+      <div class="form-group" style="flex:0"><button class="btn btn-accent" data-action="roll-custom"><i class="fas fa-dice"></i> Roll</button></div>
+    </div>
+    <div class="gen-result" id="dice-result">Roll some dice...</div>
+  </div>
+</div>
+
+<!-- RULES TAB -->
+<div class="tab-panel" id="tab-rules">
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title"><i class="fas fa-bullseye"></i> DIFFICULTY CLASSES</div>
+      <table>
+        <tbody><tr><th>Difficulty</th><th>DC</th><th>Example</th></tr>
+        <tr><td>Very Easy</td><td>5</td><td>Climb a knotted rope, notice something obvious</td></tr>
+        <tr><td>Easy</td><td>10</td><td>Hear an approaching guard, climb a rough wall</td></tr>
+        <tr><td>Average</td><td>15</td><td>Rig a door to jam, disable a simple alarm</td></tr>
+        <tr><td>Tough</td><td>20</td><td>Swim in stormy water, open a quality lock</td></tr>
+        <tr><td>Challenging</td><td>25</td><td>Leap across a 9m chasm, break into a vault</td></tr>
+        <tr><td>Formidable</td><td>30</td><td>Track across hard ground, crack Imperial codes</td></tr>
+        <tr><td>Heroic</td><td>35</td><td>Recall obscure Sith lore, notice invisible foe</td></tr>
+        <tr><td>Nearly Impossible</td><td>40</td><td>Track through space, fool a Jedi mind probe</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><i class="fas fa-skull-crossbones"></i> CONDITIONS</div>
+      <table>
+        <tbody><tr><th>Condition</th><th>Effect</th></tr>
+        <tr><td>Stunned</td><td>Can't act, -2 Defense, no Dex bonus</td></tr>
+        <tr><td>Prone</td><td>-4 melee attack, +4 ranged attack against</td></tr>
+        <tr><td>Flat-Footed</td><td>Lose Dex bonus to Defense</td></tr>
+        <tr><td>Grappled</td><td>Can't move, -4 Dex, can't use 2-handed</td></tr>
+        <tr><td>Helpless</td><td>Effective Dex 0, melee coup de grace possible</td></tr>
+        <tr><td>Blinded</td><td>50% miss, -2 AC, no Dex bonus, half speed</td></tr>
+        <tr><td>Dazed</td><td>Can only take free actions</td></tr>
+        <tr><td>Frightened</td><td>-2 attacks/saves/skills, must flee</td></tr>
+        <tr><td>Nauseated</td><td>Can only take move action, no attacks/spells</td></tr>
+        <tr><td>Staggered</td><td>Only move OR standard action (not both)</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><i class="fas fa-star"></i> XP AWARDS</div>
+      <table>
+        <tbody><tr><th>Challenge Rating</th><th>XP Award</th></tr>
+        <tr><td>CR 1</td><td>300 XP</td></tr>
+        <tr><td>CR 2</td><td>600 XP</td></tr>
+        <tr><td>CR 3</td><td>900 XP</td></tr>
+        <tr><td>CR 4</td><td>1,200 XP</td></tr>
+        <tr><td>CR 5</td><td>1,500 XP</td></tr>
+        <tr><td>CR 6</td><td>1,800 XP</td></tr>
+        <tr><td>CR 7</td><td>2,100 XP</td></tr>
+        <tr><td>CR 8</td><td>2,400 XP</td></tr>
+        <tr><td>CR 9</td><td>2,700 XP</td></tr>
+        <tr><td>CR 10</td><td>3,000 XP</td></tr>
+        <tr><td>CR 11-15</td><td>+300 per CR above 10</td></tr>
+        <tr><td>CR 16-20</td><td>+500 per CR above 15</td></tr>
+      </tbody></table>
+      <div style="margin-top:10px;padding:10px;background:var(--bg2);border-radius:6px;font-size:0.8em">
+        <div class="form-row">
+          <div class="form-group"><label>CR Defeated</label><input type="number" id="xp-cr" value="3" min="1" max="20"></div>
+          <div class="form-group"><label># Enemies</label><input type="number" id="xp-count" value="4" min="1"></div>
+          <div class="form-group"><label># PCs</label><input type="number" id="xp-pcs" value="4" min="1"></div>
+          <div class="form-group" style="flex:0"><label>&nbsp;</label><button class="btn btn-sm btn-accent" data-action="calc-xp"><i class="fas fa-calculator"></i></button></div>
+        </div>
+        <div id="xp-result" style="color:var(--gold);font-weight:600;margin-top:6px"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><i class="fas fa-gun"></i> COMBAT QUICK REFERENCE</div>
+      <table>
+        <tbody><tr><th>Action</th><th>Type</th><th>Notes</th></tr>
+        <tr><td>Attack</td><td>Standard</td><td>1d20 + BAB + mods vs Defense</td></tr>
+        <tr><td>Full Attack</td><td>Full-Round</td><td>All attacks at iterative bonuses</td></tr>
+        <tr><td>Move</td><td>Move</td><td>Up to speed (provokes AoO)</td></tr>
+        <tr><td>Draw Weapon</td><td>Move</td><td>Free if BAB +1 or higher</td></tr>
+        <tr><td>5ft Step</td><td>Free*</td><td>No AoO, replaces normal movement</td></tr>
+        <tr><td>Fighting Defensive</td><td>Standard</td><td>-4 attack, +2 dodge to Defense</td></tr>
+        <tr><td>Total Defense</td><td>Standard</td><td>+4 dodge to Defense, no attack</td></tr>
+        <tr><td>Charge</td><td>Full-Round</td><td>+2 attack, -2 Defense, straight line</td></tr>
+        <tr><td>Aid Another</td><td>Standard</td><td>DC 10 attack gives ally +2</td></tr>
+        <tr><td>Grapple</td><td>Standard</td><td>Touch attack → opposed grapple check</td></tr>
+        <tr><td>Trip</td><td>Standard</td><td>Touch attack → opposed STR/DEX</td></tr>
+        <tr><td>Disarm</td><td>Standard</td><td>Opposed attack rolls</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><i class="fas fa-shield-halved"></i> COVER &amp; CONCEALMENT</div>
+      <table>
+        <tbody><tr><th>Type</th><th>Defense Bonus</th><th>Example</th></tr>
+        <tr><td>1/4 Cover</td><td>+2</td><td>Low wall, another creature</td></tr>
+        <tr><td>1/2 Cover</td><td>+4</td><td>Pillar, thick tree</td></tr>
+        <tr><td>3/4 Cover</td><td>+7</td><td>Arrow slit, blast door</td></tr>
+        <tr><td>Total Cover</td><td>Can't target</td><td>Solid wall between</td></tr>
+        <tr><td>Concealment</td><td>20% miss</td><td>Dim light, fog, foliage</td></tr>
+        <tr><td>Total Concealment</td><td>50% miss</td><td>Darkness, smoke, invisible</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><i class="fas fa-explosion"></i> STARSHIP SCALE</div>
+      <table>
+        <tbody><tr><th>Size</th><th>Defense</th><th>HP Multiplier</th><th>Example</th></tr>
+        <tr><td>Tiny (Fighter)</td><td>+2</td><td>x1</td><td>Starfighter, speeder</td></tr>
+        <tr><td>Small</td><td>+1</td><td>x2</td><td>Light freighter (YT-1300)</td></tr>
+        <tr><td>Medium</td><td>+0</td><td>x5</td><td>Corvette, gunship</td></tr>
+        <tr><td>Large</td><td>-1</td><td>x10</td><td>Frigate</td></tr>
+        <tr><td>Huge</td><td>-2</td><td>x20</td><td>Star Destroyer</td></tr>
+        <tr><td>Colossal</td><td>-5</td><td>x50</td><td>Super Star Destroyer</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+</div>
+
+<!-- NOTES TAB -->
+<div class="tab-panel" id="tab-notes">
+  <div class="card">
+    <div class="card-title"><i class="fas fa-pen"></i> NEW NOTE</div>
+    <div class="form-row">
+      <div class="form-group"><label>Category</label>
+        <select id="note-cat">
+          <option value="session">Session Log</option>
+          <option value="plot">Plot Thread</option>
+          <option value="npc">NPC Note</option>
+          <option value="location">Location</option>
+          <option value="loot">Loot / Rewards</option>
+          <option value="reminder">Reminder</option>
+        </select>
+      </div>
+    </div>
+    <textarea id="note-text" placeholder="Write your note here..." rows="4"></textarea>
+    <button class="btn btn-accent" data-action="add-note" style="margin-top:8px"><i class="fas fa-plus"></i> Add Note</button>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="justify-content:space-between">
+      <span><i class="fas fa-list"></i> SESSION NOTES</span>
+      <select id="note-filter" style="width:auto;padding:4px 8px;font-size:0.8em">
+        <option value="all">All</option>
+        <option value="session">Session Log</option>
+        <option value="plot">Plot Threads</option>
+        <option value="npc">NPC Notes</option>
+        <option value="location">Locations</option>
+        <option value="loot">Loot</option>
+        <option value="reminder">Reminders</option>
+      </select>
+    </div>
+    <div id="notes-list"></div>
+  </div>
+</div>
+
+<!-- SAVE/LOAD TAB -->
+<div class="tab-panel" id="tab-save">
+  <div class="card">
+    <div class="card-title"><i class="fas fa-save"></i> SAVE CURRENT SESSION</div>
+    <div class="form-row">
+      <div class="form-group" style="flex:3"><input type="text" id="save-slot-name" placeholder="Save name (e.g. Session 5 - Tatooine)"></div>
+      <div class="form-group" style="flex:0"><button class="btn btn-accent" data-action="save-session"><i class="fas fa-save"></i> Save</button></div>
+    </div>
+    <div id="save-msg" style="text-align:center;margin-top:8px;font-size:0.85em;color:var(--green);opacity:0;transition:opacity 0.3s"></div>
+  </div>
+  <div class="card">
+    <div class="card-title"><i class="fas fa-folder-open"></i> SAVED SESSIONS</div>
+    <div id="saveSlotsList"></div>
+  </div>
+  <div class="card">
+    <div class="card-title"><i class="fas fa-file-export"></i> EXPORT / IMPORT</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn" data-action="export-session"><i class="fas fa-download"></i> Export JSON</button>
+      <label class="btn" style="cursor:pointer"><i class="fas fa-upload"></i> Import JSON<input type="file" accept=".json" data-action="import-session" style="display:none"></label>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Overlay -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal-content" id="modal-content"></div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+// ===== STATE =====
+var combatants = [];
+var currentTurn = 0;
+var combatRound = 1;
+var npcs = [];
+var notes = [];
+var rollLog = [];
+
+// ===== HELPERS =====
+function $(id){ return document.getElementById(id); }
+function gv(id){ var el=$(id); return el?(parseInt(el.value)||0):0; }
+function pick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+function rollDice(str){
+  var match = str.match(/^(\d+)d(\d+)([+-]\d+)?$/i);
+  if(!match) return {total:0,rolls:[],mod:0};
+  var num=parseInt(match[1]),sides=parseInt(match[2]),mod=parseInt(match[3]||'0');
+  var rolls=[];
+  for(var i=0;i<num;i++) rolls.push(Math.floor(Math.random()*sides)+1);
+  var sum=rolls.reduce(function(a,b){return a+b;},0)+mod;
+  return {total:sum,rolls:rolls,mod:mod};
+}
+
+// ===== TAB SWITCHING =====
+function switchTab(tab){
+  var panels=document.querySelectorAll('.tab-panel');
+  var btns=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<panels.length;i++) panels[i].classList.remove('active');
+  for(var i=0;i<btns.length;i++) btns[i].classList.remove('active');
+  var panel=$('tab-'+tab);
+  if(panel) panel.classList.add('active');
+  var btn=document.querySelector('[data-tab="'+tab+'"]');
+  if(btn) btn.classList.add('active');
+}
+
+// ===== COMBAT TRACKER =====
+function renderCombat(){
+  var list=$('combatants-list');
+  if(!list) return;
+  if(combatants.length===0){
+    list.innerHTML='<div style="padding:20px;text-align:center;color:var(--text-dim)">No combatants. Add some above!</div>';
+    updateTargetDropdown();
+    return;
+  }
+  var html='';
+  for(var i=0;i<combatants.length;i++){
+    var c=combatants[i];
+    var pct=(c.hp/c.maxHp)*100;
+    var barClass='hp-bar-fill'+(pct<=25?' critical':pct<=50?' low':'');
+    var typeColor=c.type==='ally'?'var(--green)':c.type==='neutral'?'var(--blue)':'var(--red)';
+    html+='<div class="combatant-row'+(i===currentTurn?' active-turn':'')+(c.hp<=0?' dead':'')+'" data-idx="'+i+'">';
+    html+='<div style="width:6px;height:40px;background:'+typeColor+';border-radius:3px"></div>';
+    html+='<div style="flex:1;min-width:0">';
+    html+='<div style="display:flex;justify-content:space-between;align-items:center">';
+    html+='<strong style="font-size:0.9em">'+c.name+'</strong>';
+    html+='<span style="font-size:0.75em;color:var(--text-dim)">Init: '+c.init+'</span>';
+    html+='</div>';
+    html+='<div class="hp-bar"><div class="'+barClass+'" style="width:'+Math.max(0,pct)+'%"></div></div>';
+    html+='<div style="display:flex;justify-content:space-between;font-size:0.75em;margin-top:3px">';
+    html+='<span>HP: '+c.hp+'/'+c.maxHp+'</span>';
+    html+='<span>Def: '+c.defense+' | Atk: '+c.attack+' | Dmg: '+c.damage+'</span>';
+    html+='</div>';
+    if(c.conditions&&c.conditions.length>0){
+      html+='<div style="margin-top:4px">';
+      for(var j=0;j<c.conditions.length;j++){
+        html+='<span class="condition-tag" data-action="remove-condition" data-cidx="'+i+'" data-cond="'+c.conditions[j]+'">'+c.conditions[j]+' \u00d7</span>';
+      }
+      html+='</div>';
+    }
+    if(c.notes) html+='<div style="font-size:0.7em;color:var(--text-dim);margin-top:3px;font-style:italic">'+c.notes+'</div>';
+    html+='</div>';
+    html+='<div style="display:flex;flex-direction:column;gap:4px">';
+    html+='<button class="btn btn-sm btn-danger" data-action="remove-combatant" data-idx="'+i+'" title="Remove"><i class="fas fa-times"></i></button>';
+    html+='</div>';
+    html+='</div>';
+  }
+  list.innerHTML=html;
+  $('round-num').textContent=combatRound;
+  updateTargetDropdown();
+}
+
+function updateTargetDropdown(){
+  var sel=$('qa-target');
+  if(!sel) return;
+  var html='';
+  for(var i=0;i<combatants.length;i++){
+    html+='<option value="'+i+'">'+combatants[i].name+'</option>';
+  }
+  sel.innerHTML=html;
+}
+
+function addCombatant(){
+  var name=$('enc-name').value.trim();
+  if(!name) return;
+  combatants.push({
+    name:name,
+    init:gv('enc-init'),
+    hp:gv('enc-hp'),
+    maxHp:gv('enc-maxhp'),
+    defense:gv('enc-def'),
+    attack:$('enc-atk').value||'+0',
+    damage:$('enc-dmg').value||'3d6',
+    type:$('enc-type').value,
+    notes:$('enc-notes').value,
+    conditions:[]
+  });
+  $('enc-name').value='';
+  renderCombat();
+  scheduleAutoSave();
+}
+
+function sortByInit(){
+  combatants.sort(function(a,b){return b.init-a.init;});
+  currentTurn=0;
+  renderCombat();
+}
+
+function nextTurn(){
+  if(combatants.length===0) return;
+  currentTurn++;
+  if(currentTurn>=combatants.length){
+    currentTurn=0;
+    combatRound++;
+  }
+  renderCombat();
+  scheduleAutoSave();
+}
+
+function prevTurn(){
+  if(combatants.length===0) return;
+  currentTurn--;
+  if(currentTurn<0){
+    currentTurn=combatants.length-1;
+    combatRound=Math.max(1,combatRound-1);
+  }
+  renderCombat();
+}
+
+// ===== NPC MANAGEMENT =====
+function renderNPCs(filter){
+  var list=$('npc-list');
+  if(!list) return;
+  filter=(filter||'').toLowerCase();
+  if(npcs.length===0){
+    list.innerHTML='<div style="padding:16px;text-align:center;color:var(--text-dim)">No saved NPCs yet</div>';
+    return;
+  }
+  var html='';
+  for(var i=0;i<npcs.length;i++){
+    var n=npcs[i];
+    if(filter&&n.name.toLowerCase().indexOf(filter)===-1&&n.species.toLowerCase().indexOf(filter)===-1&&n.role.toLowerCase().indexOf(filter)===-1) continue;
+    html+='<div class="npc-card">';
+    html+='<div style="display:flex;justify-content:space-between;align-items:center">';
+    html+='<h4>'+n.name+'</h4>';
+    html+='<div><button class="btn btn-sm" data-action="edit-npc" data-idx="'+i+'" title="Load to editor"><i class="fas fa-pen"></i></button>';
+    html+=' <button class="btn btn-sm" data-action="npc-to-combat" data-idx="'+i+'" title="Add to combat"><i class="fas fa-swords"></i></button>';
+    html+=' <button class="btn btn-sm btn-danger" data-action="delete-npc" data-idx="'+i+'" title="Delete"><i class="fas fa-trash"></i></button></div>';
+    html+='</div>';
+    html+='<div style="margin-top:6px">';
+    html+='<span class="npc-stat">'+n.species+' '+n.role+'</span>';
+    html+='<span class="npc-stat">CR <span>'+n.level+'</span></span>';
+    html+='<span class="npc-stat">HP <span>'+n.hp+'</span></span>';
+    html+='<span class="npc-stat">Def <span>'+n.defense+'</span></span>';
+    html+='<span class="npc-stat">Atk <span>'+n.attack+'</span></span>';
+    html+='<span class="npc-stat">Dmg <span>'+n.damage+'</span></span>';
+    html+='</div>';
+    html+='<div style="margin-top:4px;font-size:0.75em;color:var(--text-dim)">Saves: Fort '+n.fort+' / Ref '+n.ref+' / Will '+n.will+' | Spd: '+n.speed+'</div>';
+    if(n.special) html+='<div style="margin-top:6px;font-size:0.8em;color:var(--blue);font-style:italic">'+n.special+'</div>';
+    html+='</div>';
+  }
+  list.innerHTML=html||'<div style="padding:16px;text-align:center;color:var(--text-dim)">No matches</div>';
+}
+
+function saveNPC(){
+  var name=$('npc-name').value.trim();
+  if(!name){ alert('NPC needs a name!'); return; }
+  npcs.push({
+    name:name,
+    species:$('npc-species').value,
+    role:$('npc-role').value,
+    level:gv('npc-level'),
+    hp:gv('npc-hp'),
+    defense:gv('npc-def'),
+    attack:$('npc-atk').value||'+0',
+    damage:$('npc-dmg').value||'3d6',
+    fort:$('npc-fort').value||'+0',
+    ref:$('npc-ref').value||'+0',
+    will:$('npc-will').value||'+0',
+    speed:$('npc-speed').value||'10m',
+    special:$('npc-special').value
+  });
+  renderNPCs('');
+  scheduleAutoSave();
+}
+
+function generateRandomNPC(){
+  var level=gv('npc-level')||3;
+  var hp=Math.floor(Math.random()*level*6)+level*3;
+  var def=10+Math.floor(level*0.7)+Math.floor(Math.random()*4);
+  var atk=level+Math.floor(Math.random()*3)-1;
+  $('npc-hp').value=hp;
+  $('npc-def').value=def;
+  $('npc-atk').value=(atk>=0?'+':'')+atk;
+  var dmgDice=Math.max(1,Math.floor(level/2));
+  $('npc-dmg').value=dmgDice+'d6'+(level>5?'+'+(Math.floor(level/3)):'');
+  var fortBase=Math.floor(level*0.6)+Math.floor(Math.random()*2);
+  var refBase=Math.floor(level*0.5)+Math.floor(Math.random()*3);
+  var willBase=Math.floor(level*0.4)+Math.floor(Math.random()*2);
+  $('npc-fort').value='+'+(fortBase);
+  $('npc-ref').value='+'+(refBase);
+  $('npc-will').value='+'+(willBase);
+}
+
+// ===== GENERATORS =====
+var NAME_DATA = {
+  human:{ first:["Kael","Jyn","Cassian","Hera","Rex","Ahsoka","Mace","Padmé","Bail","Mon","Lando","Mara","Kyle","Jan","Corran","Talon","Dash","Galen","Rahm","Starkiller","Thrawn","Tycho","Wedge","Biggs","Bren","Kyp","Zekk","Tenel","Droma","Garik","Mirax","Booster","Karrde","Shada","Ghent","Pellaeon","Soontir","Ysanne","Syal","Jagged","Natasi","Gilad","Maximilian","Firmus","Jerjerrod","Wullf","Rae","Ciena","Thane","Nash"], last:["Voss","Draven","Antilles","Rendar","Katarn","Madine","Ackbar","Syndulla","Erso","Andor","Calrissian","Jade","Horn","Karrde","Terrik","Durron","Fel","Isard","Daala","Piett","Veers","Tarkin","Sloane","Ree","Kyrell"]},
+  twilek:{ first:["Aayla","Bib","Hera","Numa","Lyn","Oola","Xiaan","Tol","Vette","Nola","Alema","Daeshara","Denetrus","Elav","Firith","Koyi","Seha","Tal","Orn","Anoon"], last:["Secura","Fortuna","Syndulla","Fey'lya","Rar","Bonteri","Kansen","Mateil","Numa","Vansen"]},
+  rodian:{ first:["Greedo","Wald","Onaconda","Doda","Clegg","Rorak","Greeata","Kelko","Navik","Beedo","Neesh","Thuku","Avaro","Reelo","Sish","Leslomy","Andoorni"], last:["Farr","Holdfast","Barabel","Vansen","Anam","Klick","Hupp","Sadeet","Fansen"]},
+  wookiee:{ first:["Chewbacca","Tarfful","Zaalbar","Hanharr","Lowbacca","Ralrracheen","Attichitcuk","Lumpawaroo","Salporin","Rorworr","Greybok","Dewlannamapia","Tyvokka","Guanta","Shoran"], last:[""]},
+  trandoshan:{ first:["Bossk","Cradossk","Pekt","Ssorku","Garnac","Smug","Trask","Nossk","Krussk","Qymaen","Sarkli","Lissarkh"], last:[""]},
+  duros:{ first:["Cad","Shryne","Baniss","Ellor","Lai","Ohwun","Bane","Chachi","Jenks","Kadlo","Nien"], last:["Bane","Keansen","Nunb","De Mansen","Nansen","Hansen"]},
+  zabrak:{ first:["Maul","Savage","Eeth","Agen","Kao","Maris","Sugi","Bao-Dur","Mira","Visas","Atton","Kadrian"], last:["Opress","Koth","Kolar","Cien","Brood","Marr","Shan","Rand","Lok"]},
+  bothan:{ first:["Borsk","Asyr","Karka","Tav","Laryn","Girov","Traest","Kursk","Fey'lya","Koth","Rella"], last:["Fey'lya","Sei'lar","Kre'fey","Breil'ya","Dansen","Alya"]},
+  hutt:{ first:["Jabba","Gardulla","Ziro","Durga","Borga","Popara","Marlo","Gorga","Grappa","Nem'ro","Vogga","Aruk","Jiliac","Arok","Zorba","Desilijic","Besadii"], last:["the Hutt","Desilijic Tiure","Besadii","the Wise","the Lesser","the Elder"]},
+  droid:{ first:["R2","C-3PO","IG-88","HK-47","T3-M4","4-LOM","8D8","EV-9D9","2-1B","FX-7","K-2SO","L3-37","AP-5","Chopper","BB-8","R5-D4","R4-P17","U-3PO","TC-14","R7-A7"], last:[""]}
+};
+
+function generateName(){
+  var species=$('gen-name-species').value;
+  var data=NAME_DATA[species];
+  if(!data) return;
+  var first=pick(data.first);
+  var last=data.last.length>0&&data.last[0]!==''?pick(data.last):'';
+  var name=first+(last?' '+last:'');
+  $('gen-name-result').textContent=name;
+  $('gen-name-result').classList.add('fade-in');
+}
+
+var LOOT_DATA = {
+  1:["50 credits","Medpac (heals 1d8)","Comlink","Glow rod","Field rations (1 week)","Datapad with local maps","Stun baton","Power pack (x2)","Macrobinoculars","Flight suit"],
+  2:["200 credits","Blaster pistol (3d6)","All-temperature cloak","Security kit","Electrobinoculars","Encrypted comlink","Medpac (x3)","Syntherope (50m)","Credit chip (500 credits)","Thermal detonator"],
+  3:["1,000 credits","Blaster rifle (3d8)","Personal energy shield","Jet pack fuel (3 uses)","Rare spice (1kg)","Holocron fragment","Cortosis gauntlets","Bacta tank treatment voucher","Mandalorian armor piece","Ship upgrade component"],
+  4:["5,000 credits","Lightsaber crystal (random)","Adegan crystal","Disruptor pistol (3d8 wound)","Full Mandalorian armor set","Personal cloaking device (3 uses)","Holocron (complete)","Starship weapon upgrade","Carbonite freezing chamber access","Ancient Sith artifact"]
+};
+
+function generateLoot(){
+  var cr=$('gen-loot-cr').value;
+  var items=LOOT_DATA[cr]||LOOT_DATA[1];
+  var numItems=Math.floor(Math.random()*3)+1;
+  var result=[];
+  for(var i=0;i<numItems;i++) result.push('\u2022 '+pick(items));
+  $('gen-loot-result').innerHTML=result.join('<br>');
+}
+
+var ENCOUNTER_DATA = {
+  urban:{easy:["2 thugs harassing a merchant","A pickpocket targets the party","Drunk off-duty soldiers","A street vendor with suspicious goods"],medium:["Gang of 4 armed toughs","Bounty hunter asking questions","Swoop gang blocking the street","Corrupt security patrol"],hard:["Squad of 6 mercenaries","Dark Jedi and 2 bodyguards","Assassin droid gone rogue","Hutt enforcers collecting debts"],deadly:["Imperial Inquisitor with escort","Bounty hunter team (4 specialists)","Crime lord with full entourage","Rancor escaped from fighting pit"]},
+  space:{easy:["Debris field requiring pilot checks","Distress signal from freighter","Customs inspection","Asteroid with mineral readings"],medium:["2 pirate fighters","Imperial patrol (1 TIE squad)","Damaged ship leaking radiation","Interdiction field trap"],hard:["Pirate corvette with fighters","Imperial Star Destroyer patrol","Gravity well anomaly","Space slug ambush"],deadly:["Imperial blockade (3 ships)","Interdictor cruiser trap","Dark Side nexus distortion","Supernova shockwave incoming"]},
+  wilderness:{easy:["Hostile wildlife (2 creatures)","Quicksand/hazardous terrain","Lost traveler needing help","Abandoned camp with clues"],medium:["Pack of 4 predators","Armed poachers/hunters","Ancient ruins with traps","Tribal warriors defending territory"],hard:["Apex predator (krayt dragon young)","Hidden Separatist outpost","Force-sensitive hermit (hostile)","Sarlacc pit encounter"],deadly:["Adult krayt dragon","Dark Side cave nexus","Imperial ground assault team","Ancient Sith temple guardians"]},
+  imperial:{easy:["2 stormtroopers on patrol","Security camera and alarm","Locked blast doors (DC 20)","Maintenance droid asking questions"],medium:["Squad of 4 stormtroopers","Officer with 2 guards","Interrogation droid","Security lockdown protocol"],hard:["Elite stormtrooper squad (6)","Dark trooper prototype","Imperial officer + AT-ST","Detention block with heavy guard"],deadly:["Darktrooper squad","Imperial Inquisitor","AT-AT walker encounter","Emperor's Royal Guard (2)"]},
+  underworld:{easy:["Pickpocket in a crowded market","Scam artist running shell game","Drug dealer offering samples","Informant wanting payment"],medium:["Gang shakedown (4 thugs)","Bounty hunter in the cantina","Rigged sabacc game","Slaver ship in port"],hard:["Crime syndicate hit squad","Gladiatorial pit (must fight)","Assassination attempt on party","Black Sun operatives (6)"],deadly:["Hutt crime lord + full court","Black Sun Vigo with army","Underground fight club champion","Zann Consortium raid team"]}
+};
+
+function generateEncounter(){
+  var env=$('gen-enc-env').value;
+  var diff=$('gen-enc-diff').value;
+  var encounters=ENCOUNTER_DATA[env]&&ENCOUNTER_DATA[env][diff];
+  if(!encounters) return;
+  $('gen-enc-result').innerHTML='<strong>'+pick(encounters)+'</strong>';
+}
+
+var LOCATION_DATA = {
+  planet:["Arid desert world with twin suns, ancient ruins beneath the sand","Lush jungle planet with massive trees, hostile fauna, and forgotten temples","Ice planet with sub-zero temperatures, hidden Rebel base potential","Gas giant's habitable moon, floating cities in the clouds","Volcanic world rich in minerals, Imperial mining operation","Ocean world with underwater cities, Mon Calamari colony","City-planet with layers of undercity, endless urban sprawl","Swamp world strong in the Force, home to exiled masters"],
+  station:["Refueling depot on major hyperspace lane, diverse travelers","Abandoned research station, strange experiments left behind","Hutt-controlled pleasure station, anything goes for a price","Imperial checkpoint station, heavy security presence","Pirate haven disguised as mining platform","Medical station treating plague from nearby world","Black market bazaar in hollowed-out asteroid","Droid factory station, newly sentient AI problems"],
+  cantina:["Dingy cantina with Jizz band, back-room sabacc games","Upscale lounge, politicians and crime lords rubbing elbows","Mechanics shop doubling as smuggler front","Weapons dealer in basement, access by passphrase only","Droid repair shop run by eccentric inventor","Spice den hidden behind legitimate tea house","Fight club in abandoned warehouse, big money bets","Info broker's office, everything has a price"],
+  ship:["Battered YT-1300 freighter, hidden compartments everywhere","Luxury yacht with secret armory, noble's transport","Derelict Star Destroyer, mostly without power","Separatist dreadnought, droid crew still active","Mandalorian transport with beskar-reinforced hull","Living ship of unknown alien origin","Prison transport with valuable captive","Ghost ship drifting in deep space, no life signs"]
+};
+
+function generateLocation(){
+  var type=$('gen-loc-type').value;
+  var locations=LOCATION_DATA[type];
+  if(!locations) return;
+  $('gen-loc-result').innerHTML='<strong>'+pick(locations)+'</strong>';
+}
+
+// ===== NOTES =====
+function addNote(){
+  var text=$('note-text').value.trim();
+  if(!text) return;
+  notes.unshift({
+    text:text,
+    category:$('note-cat').value,
+    time:new Date().toLocaleString()
+  });
+  $('note-text').value='';
+  renderNotes();
+  scheduleAutoSave();
+}
+
+function renderNotes(){
+  var list=$('notes-list');
+  if(!list) return;
+  var filter=$('note-filter')?$('note-filter').value:'all';
+  if(notes.length===0){
+    list.innerHTML='<div style="padding:16px;text-align:center;color:var(--text-dim)">No notes yet</div>';
+    return;
+  }
+  var html='';
+  var catColors={session:'var(--accent)',plot:'var(--purple)',npc:'var(--gold)',location:'var(--green)',loot:'var(--warning)',reminder:'var(--info)'};
+  for(var i=0;i<notes.length;i++){
+    var n=notes[i];
+    if(filter!=='all'&&n.category!==filter) continue;
+    html+='<div class="note-item">';
+    html+='<div style="display:flex;justify-content:space-between;align-items:center">';
+    html+='<span style="font-size:0.75em;color:'+(catColors[n.category]||'var(--accent)')+';text-transform:uppercase;font-weight:600">'+n.category+'</span>';
+    html+='<div><span class="note-time">'+n.time+'</span> <button class="btn btn-sm btn-danger" data-action="delete-note" data-idx="'+i+'" style="margin-left:6px;padding:2px 6px"><i class="fas fa-times"></i></button></div>';
+    html+='</div>';
+    html+='<div class="note-text">'+n.text+'</div>';
+    html+='</div>';
+  }
+  list.innerHTML=html||'<div style="padding:16px;text-align:center;color:var(--text-dim)">No notes in this category</div>';
+}
+
+// ===== XP CALCULATOR =====
+function calcXP(){
+  var cr=gv('xp-cr');
+  var count=gv('xp-count');
+  var pcs=gv('xp-pcs')||4;
+  var xpPerCR=cr<=10?cr*300:(cr<=15?3000+(cr-10)*300:4500+(cr-15)*500);
+  var totalXP=xpPerCR*count;
+  var perPC=Math.floor(totalXP/pcs);
+  $('xp-result').innerHTML='Total XP: '+totalXP+' | Per PC ('+pcs+'): '+perPC+' XP';
+}
+
+// ===== DICE ROLLER =====
+function rollAndShow(expr){
+  var result=rollDice(expr);
+  if(result.total===0){
+    $('dice-result').innerHTML='<span style="color:var(--red)">Invalid expression. Use format: NdX or NdX+M</span>';
+    return;
+  }
+  var html='<div style="font-size:1.5em;font-weight:700;color:var(--gold)">'+result.total+'</div>';
+  html+='<div style="font-size:0.8em;color:var(--text-dim)">'+expr+' \u2192 ['+result.rolls.join(', ')+']'+(result.mod!==0?(result.mod>0?'+':'')+result.mod:'')+'</div>';
+  $('dice-result').innerHTML=html;
+  rollLog.unshift({expr:expr,result:result.total,time:new Date().toLocaleTimeString()});
+  if(rollLog.length>20) rollLog.pop();
+}
+
+// ===== SAVE / LOAD SYSTEM =====
+var STORAGE_KEY = 'sw_rpg_gm_full_saves';
+var AUTO_SAVE_KEY = 'sw_rpg_gm_full_autosave';
+var safeStorage = (function(){
+  try{ localStorage.setItem('__test__','1'); localStorage.removeItem('__test__'); return localStorage; }
+  catch(e){ var mem={}; return {getItem:function(k){return mem[k]||null;},setItem:function(k,v){mem[k]=v;},removeItem:function(k){delete mem[k];}}; }
+})();
+
+function collectAllData(){
+  return {
+    combatants:combatants,
+    currentTurn:currentTurn,
+    combatRound:combatRound,
+    npcs:npcs,
+    notes:notes,
+    rollLog:rollLog,
+    _savedAt:new Date().toISOString(),
+    _version:1
+  };
+}
+
+function loadAllData(data){
+  if(!data) return;
+  if(data.combatants) combatants=data.combatants;
+  if(data.currentTurn!==undefined) currentTurn=data.currentTurn;
+  if(data.combatRound!==undefined) combatRound=data.combatRound;
+  if(data.npcs) npcs=data.npcs;
+  if(data.notes) notes=data.notes;
+  if(data.rollLog) rollLog=data.rollLog;
+  renderCombat();
+  renderNPCs('');
+  renderNotes();
+}
+
+function getSaveSlots(){
+  try{ var raw=safeStorage.getItem(STORAGE_KEY); return raw?JSON.parse(raw):{}; }catch(e){return {};}
+}
+
+function saveToSlot(name){
+  if(!name) name='Quick Save';
+  var slots=getSaveSlots();
+  slots[name]=collectAllData();
+  safeStorage.setItem(STORAGE_KEY,JSON.stringify(slots));
+  showSaveMsg('Saved: '+name);
+  renderSaveSlots();
+}
+
+function loadFromSlot(name){
+  var slots=getSaveSlots();
+  if(slots[name]){loadAllData(slots[name]);showSaveMsg('Loaded: '+name);}
+}
+
+function deleteSlot(name){
+  var slots=getSaveSlots();
+  delete slots[name];
+  safeStorage.setItem(STORAGE_KEY,JSON.stringify(slots));
+  renderSaveSlots();
+  showSaveMsg('Deleted: '+name);
+}
+
+function exportSession(){
+  var data=collectAllData();
+  var blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  a.href=url; a.download='gm_session_'+new Date().toISOString().slice(0,10)+'.json';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  showSaveMsg('Exported to file');
+}
+
+function importSession(file){
+  if(!file) return;
+  var reader=new FileReader();
+  reader.onload=function(e){
+    try{var data=JSON.parse(e.target.result);loadAllData(data);showSaveMsg('Imported successfully');}
+    catch(err){showSaveMsg('Error: Invalid file');}
+  };
+  reader.readAsText(file);
+}
+
+function autoSave(){
+  safeStorage.setItem(AUTO_SAVE_KEY,JSON.stringify(collectAllData()));
+}
+function loadAutoSave(){
+  try{var raw=safeStorage.getItem(AUTO_SAVE_KEY);if(raw){loadAllData(JSON.parse(raw));}}catch(e){}
+}
+
+var autoSaveTimer=null;
+function scheduleAutoSave(){
+  if(autoSaveTimer) clearTimeout(autoSaveTimer);
+  autoSaveTimer=setTimeout(autoSave,3000);
+}
+
+function showSaveMsg(msg){
+  var el=$('save-msg');if(!el) return;
+  el.textContent=msg;el.style.opacity='1';
+  setTimeout(function(){el.style.opacity='0';},2500);
+}
+
+function renderSaveSlots(){
+  var container=$('saveSlotsList');if(!container) return;
+  var slots=getSaveSlots();
+  var keys=Object.keys(slots);
+  if(keys.length===0){container.innerHTML='<div style="padding:16px;text-align:center;color:var(--text-dim)">No saved sessions yet</div>';return;}
+  var html='';
+  for(var i=0;i<keys.length;i++){
+    var name=keys[i];
+    var saved=slots[name]._savedAt?new Date(slots[name]._savedAt).toLocaleString():'';
+    html+='<div style="display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid var(--border)">';
+    html+='<div style="flex:1"><div style="font-weight:600;color:var(--accent)">'+name+'</div>';
+    html+='<div style="font-size:0.75em;color:var(--text-dim)">'+saved+'</div></div>';
+    html+='<button class="btn btn-sm btn-accent" data-action="load-slot" data-slot="'+name+'">Load</button>';
+    html+=' <button class="btn btn-sm btn-danger" data-action="delete-slot" data-slot="'+name+'"><i class="fas fa-trash"></i></button>';
+    html+='</div>';
+  }
+  container.innerHTML=html;
+}
+
+// ===== EVENT HANDLING =====
+document.addEventListener('click',function(e){
+  var tabBtn=e.target.closest('.tab-btn');
+  if(tabBtn){switchTab(tabBtn.getAttribute('data-tab'));return;}
+
+  var target=e.target.closest('[data-action]');
+  if(!target) return;
+  var action=target.getAttribute('data-action');
+
+  // Combat
+  if(action==='add-combatant'){addCombatant();return;}
+  if(action==='next-turn'){nextTurn();return;}
+  if(action==='prev-turn'){prevTurn();return;}
+  if(action==='sort-init'){sortByInit();return;}
+  if(action==='clear-encounter'){combatants=[];currentTurn=0;combatRound=1;renderCombat();scheduleAutoSave();return;}
+  if(action==='remove-combatant'){var idx=parseInt(target.getAttribute('data-idx'));combatants.splice(idx,1);if(currentTurn>=combatants.length)currentTurn=0;renderCombat();scheduleAutoSave();return;}
+  if(action==='qa-damage'){
+    var ti=parseInt($('qa-target').value);var amt=gv('qa-amount');
+    if(combatants[ti]){combatants[ti].hp=Math.max(0,combatants[ti].hp-amt);renderCombat();scheduleAutoSave();}return;
+  }
+  if(action==='qa-heal'){
+    var ti=parseInt($('qa-target').value);var amt=gv('qa-amount');
+    if(combatants[ti]){combatants[ti].hp=Math.min(combatants[ti].maxHp,combatants[ti].hp+amt);renderCombat();scheduleAutoSave();}return;
+  }
+  if(action==='qa-add-condition'){
+    var ti=parseInt($('qa-target').value);var cond=$('qa-condition').value;
+    if(combatants[ti]&&cond){if(!combatants[ti].conditions)combatants[ti].conditions=[];if(combatants[ti].conditions.indexOf(cond)===-1)combatants[ti].conditions.push(cond);renderCombat();scheduleAutoSave();}return;
+  }
+  if(action==='qa-clear-conditions'){
+    var ti=parseInt($('qa-target').value);
+    if(combatants[ti]){combatants[ti].conditions=[];renderCombat();scheduleAutoSave();}return;
+  }
+  if(action==='remove-condition'){
+    var ci=parseInt(target.getAttribute('data-cidx'));var cond=target.getAttribute('data-cond');
+    if(combatants[ci]&&combatants[ci].conditions){var idx=combatants[ci].conditions.indexOf(cond);if(idx>-1)combatants[ci].conditions.splice(idx,1);renderCombat();scheduleAutoSave();}return;
+  }
+
+  // NPCs
+  if(action==='save-npc'){saveNPC();return;}
+  if(action==='gen-npc'){generateRandomNPC();return;}
+  if(action==='delete-npc'){npcs.splice(parseInt(target.getAttribute('data-idx')),1);renderNPCs('');scheduleAutoSave();return;}
+  if(action==='edit-npc'){
+    var n=npcs[parseInt(target.getAttribute('data-idx'))];if(!n)return;
+    $('npc-name').value=n.name;$('npc-species').value=n.species;$('npc-role').value=n.role;
+    $('npc-level').value=n.level;$('npc-hp').value=n.hp;$('npc-def').value=n.defense;
+    $('npc-atk').value=n.attack;$('npc-dmg').value=n.damage;
+    $('npc-fort').value=n.fort;$('npc-ref').value=n.ref;$('npc-will').value=n.will;
+    $('npc-speed').value=n.speed;$('npc-special').value=n.special||'';
+    switchTab('npcs');return;
+  }
+  if(action==='npc-to-combat'||action==='add-npc-to-combat'){
+    var n=action==='npc-to-combat'?npcs[parseInt(target.getAttribute('data-idx'))]:null;
+    if(action==='add-npc-to-combat'){
+      n={name:$('npc-name').value,hp:gv('npc-hp'),defense:gv('npc-def'),attack:$('npc-atk').value,damage:$('npc-dmg').value,special:$('npc-special').value};
+    }
+    if(!n) return;
+    combatants.push({name:n.name,init:Math.floor(Math.random()*20)+1,hp:n.hp||15,maxHp:n.hp||15,defense:n.defense||14,attack:n.attack||'+0',damage:n.damage||'3d6',type:'enemy',notes:n.special||'',conditions:[]});
+    renderCombat();scheduleAutoSave();return;
+  }
+
+  // Generators
+  if(action==='gen-name'){generateName();return;}
+  if(action==='gen-loot'){generateLoot();return;}
+  if(action==='gen-encounter'){generateEncounter();return;}
+  if(action==='gen-location'){generateLocation();return;}
+  if(action==='calc-xp'){calcXP();return;}
+
+  // Dice
+  if(action==='roll'){rollAndShow(target.getAttribute('data-dice'));return;}
+  if(action==='roll-custom'){var expr=$('custom-dice').value.trim();if(expr)rollAndShow(expr);return;}
+
+  // Notes
+  if(action==='add-note'){addNote();return;}
+  if(action==='delete-note'){notes.splice(parseInt(target.getAttribute('data-idx')),1);renderNotes();scheduleAutoSave();return;}
+
+  // Save/Load
+  if(action==='save-session'){var name=$('save-slot-name').value.trim();saveToSlot(name||'Quick Save');$('save-slot-name').value='';return;}
+  if(action==='load-slot'){loadFromSlot(target.getAttribute('data-slot'));return;}
+  if(action==='delete-slot'){deleteSlot(target.getAttribute('data-slot'));return;}
+  if(action==='export-session'){exportSession();return;}
+});
+
+document.addEventListener('change',function(e){
+  if(e.target.getAttribute('data-action')==='import-session'){importSession(e.target.files[0]);e.target.value='';return;}
+  if(e.target.id==='note-filter'){renderNotes();return;}
+  if(e.target.id==='npc-search'){renderNPCs(e.target.value);return;}
+});
+
+document.addEventListener('input',function(e){
+  if(e.target.id==='npc-search'){renderNPCs(e.target.value);}
+});
+
+// ===== INIT =====
+function init(){
+  renderCombat();
+  renderNPCs('');
+  renderNotes();
+  renderSaveSlots();
+  loadAutoSave();
+}
+init();
+
+})();
+</script>
+
+</body></html>
